@@ -1,32 +1,24 @@
 <html>
 <head>
-    <style>
-        .cuadrado {
-            position: absolute; 
-            height: 50px; 
-            width: 50px; 
-            background-color: blue; 
-            transition: all 0.2s ease-out
-        }
-    </style>
 </head>
 <body>
-	<div class="cuadrado" style="left: 0; top: 0;">t</div>
+	<div class="cuadrado" style="left: 0; top: 0;"></div>
 	<script>
-        let cuadrado = document.querySelector('.cuadrado');
-        document.onkeydown = (event) => {
-            if (event.keyCode == 65) {
-                cuadrado.style.left = (parseInt(cuadrado.style.left) - 50) + "px";
-            } else if (event.keyCode == 87) {
-                cuadrado.style.top = (parseInt(cuadrado.style.top) - 50) + "px";
-            } else if (event.keyCode == 68) {
-                cuadrado.style.left = (parseInt(cuadrado.style.left) + 50) + "px";
-            }  else if (event.keyCode == 83) {
-                cuadrado.style.top = (parseInt(cuadrado.style.top) + 50) + "px";
-            }
-            const colores = ["red", "blue", "green", "yellow", "orange"];
-            cuadrado.style.backgroundColor = colores[parseInt(Math.random() * 5)];
-        }
+let cuadrado = document.querySelector('.cuadrado');
+document.onkeydown = (event) => {
+    if (event.keyCode == 65) {
+        cuadrado.style.left = (parseInt(
+    cuadrado.style.left) - 50) + "px";
+    } else if (event.keyCode == 87) {
+    cuadrado.style.top = (parseInt(cuadrado.style.top) - 50) + "px";
+    } else if (event.keyCode == 68) {
+    cuadrado.style.left = (parseInt(cuadrado.style.left) + 50) + "px";
+    }  else if (event.keyCode == 83) {
+    cuadrado.style.top = (parseInt(cuadrado.style.top) + 50) + "px";
+    }
+const colores = ["red", "blue", "green", "yellow", "orange"];
+	cuadrado.style.backgroundColor = colores[parseInt(Math.random() * 5)];
+}
 	</script>
 </body>
 </html>
